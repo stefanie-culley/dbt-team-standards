@@ -37,8 +37,10 @@ dbt-team-standards/
 
 - Work in small, approved phases. Before building anything in a new phase, describe
   the proposed work and wait for approval.
-- Explain dbt and Spark concepts in plain English. Keep responses concise and proceed
-  one small step at a time.
+- Keep chat replies short enough to read without scrolling. Cover one small piece of
+  work per message.
+- Ask for one decision at a time. Wait for the answer before raising the next one.
+- Explain dbt and Spark concepts in plain English.
 - Use synthetic marketing data only. Never use real customer data or expose secrets;
   keep credentials in ignored `.env` files. The repo is public: never commit workspace
   hosts, HTTP paths, tokens or other environment details.
