@@ -1,0 +1,23 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+profiles.yml
+!**/profiles.example.yml
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Editor / OS
+.vscode/settings.json
+.DS_Store
+Thumbs.db
