@@ -1,0 +1,24 @@
+name: marketing_medallion
+version: "0.1.0"
+profile: marketing_medallion
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+
+clean-targets: ["target", "dbt_packages"]
+
+# Bronze is not built by dbt: the loader lands it, and models read it with source().
+# Schema names are the same in every environment; the catalog (DBT_CATALOG) changes.
+models:
+  marketing_medallion:
+    staging:
+      +schema: silver
+      +materialized: view
+    intermediate:
+      +schema: silver
+      +materialized: table
+    marts:
+      +schema: gold
+      +materialized: table
